@@ -33,7 +33,12 @@ Now works with the new Instagram 2020 API
 
 ### Install via NPM
 ```sh
-$ npm install vue-instagram --save
+$ npm install https://github.com/nassosyian/vue-instagram --save
+```
+
+### Install via Yarn
+```sh
+$ yarn add https://github.com/nassosyian/vue-instagram
 ```
 
 #### Register as Component

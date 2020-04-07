@@ -1,5 +1,5 @@
 <template>
-  <div :class="containerClass">
+  <ul :class="containerClass">
     <slot
       name="loading"
       :loading="loading"
@@ -14,7 +14,7 @@
       name="error"
       :error="error"
     />
-  </div>
+  </ul>
 </template>
 
 <script>

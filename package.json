@@ -6,10 +6,10 @@
   "main": "dist/vue-instagram.min.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kevinongko/vue-instagram.git"
+    "url": "git+https://github.com/nassosyian/vue-instagram.git"
   },
   "bugs": {
-    "url": "https://github.com/kevinongko/vue-instagram/issues"
+    "url": "https://github.com/nassosyian/vue-instagram/issues"
   },
   "keywords": [
     "component",

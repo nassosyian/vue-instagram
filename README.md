@@ -13,7 +13,8 @@ Fetch instagram feed via [`GET /me/media`](https://graph.instagram.com/me/media/
 
 ## Changes
 
-Now works with the new Instagram 2020 API
+Now works with the new Instagram 2020 API. 
+Based on this https://gitlab.com/snippets/1957175
 
 ## Demo
 

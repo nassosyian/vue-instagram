@@ -7,9 +7,13 @@
 
 Instagram's feed fetcher component based on [Vue](https://vuejs.org/).
 
-Fetch instagram feed via [`GET /users/self`](https://www.instagram.com/developer/endpoints/users/)
+Fetch instagram feed via [`GET /me/media`](https://graph.instagram.com/me/media/)
 
 **Works with Vue 2.***
+
+## Changes
+
+Now works with the new Instagram 2020 API
 
 ## Demo
 
@@ -20,7 +24,7 @@ Fetch instagram feed via [`GET /users/self`](https://www.instagram.com/developer
 ### Install via CDN
 ```html
 <script src="https://unpkg.com/vue"></script>
-<script src="https://unpkg.com/vue-instagram@3.0.0"></script>
+<script src="https://unpkg.com/vue-instagram@3.1.0"></script>
 
 <script>
   Vue.use(VueInstagram.default)
@@ -60,7 +64,7 @@ Style your feeds using [scoped slot](https://vuejs.org/v2/guide/components.html#
 
 ```vue
 <template>
-  <vue-instagram token="accessTokenHere" :count="5" :tags="['hashtag1', 'hashtag2']" mediaType="image">
+  <vue-instagram token="accessTokenHere" :count="5" fields="media_url,media_type,permalink,caption"  :mediatypes="['IMAGE', 'VIDEO', 'CAROUSEL_ALBUM']">
     <template v-slot:loading="props">
       <h1 v-if="props.loading" class="fancy-loading">Loading, please wait...</h1>
     </template>
@@ -92,13 +96,16 @@ export default {
 |-----|-----------|----|--------|
 |token|Instagram's access token|String|true|
 |count|Numbers of feed to fetch|Number|true
-|tags|Filter profile's feed by hastag|Array|false
-|mediaType|Filter profile's feed by media type: image or video|String|false
+|fields|The fields you want to access|String or Array|true
+|mediatypes|Filter profile's feed by media type: image or video|String|false
 
 ## License
 
 Vue-Instagram is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
 ## Support
+
+This is a fork of https://github.com/kevinongko/vue-instagram
+
 Hello, I'm Kevin the maintainer of this project in my free time (which is getting lessen these days), if this project does help you in any way please consider to support me. Thanks :smiley:
 - [One-time donation via Paypal](https://www.paypal.me/kevinongko)
